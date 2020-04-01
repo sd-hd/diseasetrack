@@ -19,6 +19,7 @@ void Reaction::AcceptClusters(
     std::tuple<std::string, std::vector<std::string>> _clusters) {
   std::vector<std::string> cluster_to_tangle;
   std::vector<std::tuple<std::string, std::string, UINT64>> toDB;
+  logMessage("new connection", "INFO");
   toDB.clear();
   cluster_to_tangle.clear();
   Crypto *crypto = new Crypto();

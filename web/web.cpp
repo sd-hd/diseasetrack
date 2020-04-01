@@ -61,6 +61,7 @@ std::thread *WS::startServer() {
             API *api = new API(oss.str());
             api->ClustersDetected.connect(
                 this, &WS::AcceptClustersDetectedForwarding);
+            logMessage("evaluate", "DBG");
             answer = api->evaluate();
             api->ClustersDetected.disconnect(this);
             delete (api);
